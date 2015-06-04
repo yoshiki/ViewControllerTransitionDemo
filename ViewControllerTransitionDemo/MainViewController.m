@@ -1,5 +1,6 @@
 #import "MainViewController.h"
 #import "ModalDemoViewController.h"
+#import "NavigationViewController.h"
 
 @interface MainViewController ()
 
@@ -21,6 +22,10 @@
                   @{
                       @"title": @"Navigation",
                       @"class": @"NavigationDemoViewController",
+                      },
+                  @{
+                      @"title": @"Navigation with interaction",
+                      @"class": @"NavigationInteractionDemoViewController",
                       },
                   ];
     
@@ -61,7 +66,12 @@
     NSDictionary *rowInfo = _rowInfos[indexPath.row];
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:rowInfo[@"class"]];
-    [self.navigationController pushViewController:vc animated:YES];
+    if (indexPath.row == 2) {
+        NavigationViewController *nav = [[NavigationViewController alloc] initWithRootViewController:vc];
+        [self presentViewController:nav animated:YES completion:nil];
+    } else {
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 @end

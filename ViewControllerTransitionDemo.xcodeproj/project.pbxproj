@@ -25,6 +25,9 @@
 		D6A7B45218E966890059BC20 /* CustomModalTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A7B45118E966890059BC20 /* CustomModalTransition.m */; };
 		D6A7B45F18E96B2C0059BC20 /* NavigationDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A7B45E18E96B2C0059BC20 /* NavigationDemoViewController.m */; };
 		D6A7B46218E96BF40059BC20 /* CustomNavigationTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A7B46118E96BF40059BC20 /* CustomNavigationTransition.m */; };
+		D6F2C76E1B2024310000F10B /* NavigationInteractionDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F2C76D1B2024310000F10B /* NavigationInteractionDemoViewController.m */; };
+		D6F2C7711B2026340000F10B /* PopAnimatedTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F2C7701B2026340000F10B /* PopAnimatedTransition.m */; };
+		D6F2C7771B202FC30000F10B /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F2C7761B202FC30000F10B /* NavigationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +68,12 @@
 		D6A7B45E18E96B2C0059BC20 /* NavigationDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationDemoViewController.m; sourceTree = "<group>"; };
 		D6A7B46018E96BF40059BC20 /* CustomNavigationTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomNavigationTransition.h; sourceTree = "<group>"; };
 		D6A7B46118E96BF40059BC20 /* CustomNavigationTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNavigationTransition.m; sourceTree = "<group>"; };
+		D6F2C76C1B2024310000F10B /* NavigationInteractionDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationInteractionDemoViewController.h; sourceTree = "<group>"; };
+		D6F2C76D1B2024310000F10B /* NavigationInteractionDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationInteractionDemoViewController.m; sourceTree = "<group>"; };
+		D6F2C76F1B2026340000F10B /* PopAnimatedTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopAnimatedTransition.h; sourceTree = "<group>"; };
+		D6F2C7701B2026340000F10B /* PopAnimatedTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopAnimatedTransition.m; sourceTree = "<group>"; };
+		D6F2C7751B202FC30000F10B /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
+		D6F2C7761B202FC30000F10B /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +140,7 @@
 				D6019C5118E2807500C2A396 /* MainViewController.m */,
 				D6A7B45B18E96B070059BC20 /* Modal */,
 				D6A7B45C18E96B140059BC20 /* Navigation */,
+				D6F2C76B1B20240F0000F10B /* Navigation with interaction */,
 				D6019C3318E2804D00C2A396 /* Images.xcassets */,
 				D6019C2218E2804D00C2A396 /* Supporting Files */,
 			);
@@ -186,6 +196,19 @@
 				D6A7B46118E96BF40059BC20 /* CustomNavigationTransition.m */,
 			);
 			name = Navigation;
+			sourceTree = "<group>";
+		};
+		D6F2C76B1B20240F0000F10B /* Navigation with interaction */ = {
+			isa = PBXGroup;
+			children = (
+				D6F2C7751B202FC30000F10B /* NavigationViewController.h */,
+				D6F2C7761B202FC30000F10B /* NavigationViewController.m */,
+				D6F2C76C1B2024310000F10B /* NavigationInteractionDemoViewController.h */,
+				D6F2C76D1B2024310000F10B /* NavigationInteractionDemoViewController.m */,
+				D6F2C76F1B2026340000F10B /* PopAnimatedTransition.h */,
+				D6F2C7701B2026340000F10B /* PopAnimatedTransition.m */,
+			);
+			name = "Navigation with interaction";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,13 +308,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6F2C76E1B2024310000F10B /* NavigationInteractionDemoViewController.m in Sources */,
 				D6A7B45218E966890059BC20 /* CustomModalTransition.m in Sources */,
 				D6019C2C18E2804D00C2A396 /* AppDelegate.m in Sources */,
+				D6F2C7711B2026340000F10B /* PopAnimatedTransition.m in Sources */,
 				D6A7B46218E96BF40059BC20 /* CustomNavigationTransition.m in Sources */,
 				D6A7B44D18E964CB0059BC20 /* ModalDemoViewController.m in Sources */,
 				D6019C5218E2807500C2A396 /* MainViewController.m in Sources */,
 				D6019C2818E2804D00C2A396 /* main.m in Sources */,
 				D6A7B45F18E96B2C0059BC20 /* NavigationDemoViewController.m in Sources */,
+				D6F2C7771B202FC30000F10B /* NavigationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

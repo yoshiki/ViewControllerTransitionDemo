@@ -18,24 +18,17 @@
 - (IBAction)show:(id)sender
 {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-    UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"Navigation"];
+    UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
     self.navigationController.delegate = self;
     [self.navigationController pushViewController:vc animated:YES];
 }
 
-- (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
-{
-    return [CustomNavigationTransition new];
-}
+#pragma mark - UINavigationControllerDelegate
 
-- (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
-{
-    CustomNavigationTransition *transition = [CustomNavigationTransition new];
-    transition.isPushing = YES;
-    return transition;
-}
-
-- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC
+- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
+                                  animationControllerForOperation:(UINavigationControllerOperation)operation
+                                               fromViewController:(UIViewController *)fromVC
+                                                 toViewController:(UIViewController *)toVC
 {
     CustomNavigationTransition *transition = [CustomNavigationTransition new];
     transition.isPushing = (operation == UINavigationControllerOperationPush);

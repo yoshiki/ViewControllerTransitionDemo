@@ -29,7 +29,7 @@
     if (self.isPushing) {
         frontView = toVC.view;
         backView = fromVC.view;
-        frontView.frame = CGRectOffset(frontView.frame, frontView.bounds.size.width, 0);
+        frontView.frame = CGRectOffset(frontView.frame, frontView.bounds.size.width, 0.0f);
         snapToPoint = containerView.center;
     } else {
         frontView = fromVC.view;
@@ -40,7 +40,6 @@
         };
     }
     
-    [containerView addSubview:backView];
     [containerView addSubview:frontView];
     
     self.animator = [[UIDynamicAnimator alloc] initWithReferenceView:containerView];
